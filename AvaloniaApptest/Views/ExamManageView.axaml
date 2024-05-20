@@ -1,0 +1,37 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:u="https://irihi.tech/ursa"
+             xmlns:vm="using:AvaloniaApptest.ViewModels"
+             x:DataType="vm:ExamManageViewModel"
+             x:Class="AvaloniaApptest.Views.ExamManageView">
+  <Border Classes="Shadow" Theme="{StaticResource CardBorder}">
+    <Grid ColumnDefinitions="Auto,*">
+      <u:NavMenu
+            Width="200"
+            >
+        <u:NavMenuItem Header="首页">
+          <u:NavMenuItem.Icon>
+            
+          </u:NavMenuItem.Icon>
+        </u:NavMenuItem>
+        <u:NavMenuItem IsVerticalCollapsed="True" Header="考核方案">
+          <u:NavMenuItem.Icon>
+
+          </u:NavMenuItem.Icon>
+          <u:NavMenuItem  Header="考核方案制定" />
+          <u:NavMenuItem Header="考核科目" />
+        </u:NavMenuItem>
+        <u:NavMenuItem IsVerticalCollapsed="True" Header="考核结果">
+          <u:NavMenuItem.Icon>
+            
+          </u:NavMenuItem.Icon>
+          <u:NavMenuItem Header="报表查询" />
+        </u:NavMenuItem>
+      </u:NavMenu>
+      <ContentControl Grid.Column="1"></ContentControl>
+    </Grid>
+  </Border>
+</UserControl>

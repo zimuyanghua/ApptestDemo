@@ -1,0 +1,34 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view="clr-namespace:AvaloniaApptest.Views"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             xmlns:vm="using:AvaloniaApptest.ViewModels"
+             x:DataType="vm:NavigationViewModel"
+             x:Class="AvaloniaApptest.Views.NavigationView">
+  <Border Classes="Shadow" Theme="{StaticResource CardBorder}">
+    <UniformGrid Columns="3" Rows="2" Margin="28">
+      <Button  Classes="Primary" Theme="{DynamicResource SolidButton}"
+               Content="系统管理" Margin="20"
+               IsVisible="{Binding $parent[view:HomeView].((vm:HomeViewModel)DataContext).IsExaminer}"
+               Command="{Binding SystemManageCommand}"/>
+      <Button  Classes="Secondary" Theme="{DynamicResource SolidButton}"
+               Content="标绘考核" Margin="20"
+               IsVisible="{Binding $parent[view:HomeView].((vm:HomeViewModel)DataContext).IsExaminer}"
+               Command="{Binding ExamManageCommand}"/>
+      <Button  Classes="Tertiary" Theme="{DynamicResource SolidButton}"
+               Content="雷达标绘" Margin="20"
+               IsVisible="{Binding !$parent[view:HomeView].((vm:HomeViewModel)DataContext).IsExaminer}"
+               Command="{Binding RadorManageCommand}"/>
+      <Button  Classes="Success" Theme="{DynamicResource SolidButton}"
+               Content="接口管理" Margin="20"
+               IsVisible="{Binding $parent[view:HomeView].((vm:HomeViewModel)DataContext).IsExaminer}"
+               Command="{Binding BlankManageCommand}"/>
+      <Button  Classes="Warning" Theme="{DynamicResource SolidButton}"
+               Content="历史回放" Margin="20"
+               IsVisible="{Binding $parent[view:HomeView].((vm:HomeViewModel)DataContext).IsExaminer}"
+               Command="{Binding BlankManageCommand}"/>
+    </UniformGrid>
+  </Border>
+</UserControl>

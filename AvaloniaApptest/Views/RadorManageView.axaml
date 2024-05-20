@@ -1,0 +1,124 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:u="https://irihi.tech/ursa"
+             xmlns:vm="using:AvaloniaApptest.ViewModels"
+             xmlns:view="clr-namespace:AvaloniaApptest.Views"
+             x:DataType="vm:RadorManageViewModel"
+             mc:Ignorable="d" d:DesignWidth="700" d:DesignHeight="350"
+             x:Class="AvaloniaApptest.Views.RadorManageView">
+  <Border Grid.Row="1" Classes="Shadow" Theme="{StaticResource CardBorder}">
+    <Grid ColumnDefinitions="*,4*,*">
+      <StackPanel>
+        <Expander Header="基础标绘">
+          <ListBox  Theme="{DynamicResource ButtonRadioGroupListBox}"
+                    SelectionChanged="ListBox_SelectionChanged">
+            <ListBox.ItemsPanel>
+              <ItemsPanelTemplate>
+                <WrapPanel Orientation="Horizontal"/>
+              </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.Styles>
+              <Style Selector="ListBoxItem">
+                <Setter Property="Width" Value="80"/>
+                <Setter Property="Height" Value="40"/>
+              </Style>
+            </ListBox.Styles>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">直线</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem >
+              <TextBlock HorizontalAlignment="Center">折线</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">矩形</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">圆形</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">多边形</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">标记点</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">仓库</TextBlock>
+            </ListBoxItem>
+          </ListBox>
+        </Expander>
+        <Expander Header="实物模型">
+          <ListBox Theme="{DynamicResource ButtonRadioGroupListBox}"
+                   SelectionChanged="ListBox_SelectionChanged">
+            <ListBox.ItemsPanel>
+              <ItemsPanelTemplate>
+                <WrapPanel Orientation="Horizontal"/>
+              </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.Styles>
+              <Style Selector="ListBoxItem">
+                <Setter Property="Width" Value="80"/>
+                <Setter Property="Height" Value="40"/>
+              </Style>
+            </ListBox.Styles>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">战列舰</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">驱逐舰</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">护卫舰</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">战车</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">指挥车</TextBlock>
+            </ListBoxItem>
+          </ListBox>
+        </Expander>
+        <Expander Header="辅助工具">
+          <ListBox Theme="{DynamicResource ButtonRadioGroupListBox}"
+                   SelectionChanged="ListBox_SelectionChanged">
+            <ListBox.ItemsPanel>
+              <ItemsPanelTemplate>
+                <WrapPanel Orientation="Horizontal"/>
+              </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.Styles>
+              <Style Selector="ListBoxItem">
+                <Setter Property="Width" Value="80"/>
+                <Setter Property="Height" Value="40"/>
+              </Style>
+            </ListBox.Styles>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">三角板</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">分规</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">平行尺</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">量角器</TextBlock>
+            </ListBoxItem>
+            <ListBoxItem>
+              <TextBlock HorizontalAlignment="Center">测距</TextBlock>
+            </ListBoxItem>
+          </ListBox>
+        </Expander>
+      </StackPanel>
+      <!--<view:MapsuiView Grid.Column="1"/>-->
+      <ContentControl Grid.Column="1" Content="{Binding ActiveContent}"/>
+      <StackPanel Grid.Column="2" Spacing="2">
+        <TextBlock>屏幕坐标</TextBlock>
+        <TextBox Text="{Binding Positon}"/>
+        <TextBlock>地图坐标</TextBlock>
+        <TextBox Text="{Binding Latlon}"/>
+      </StackPanel>
+    </Grid>
+  </Border>
+</UserControl>

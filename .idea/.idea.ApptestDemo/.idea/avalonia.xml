@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="AvaloniaApptest/App.axaml" value="AvaloniaApptest/AvaloniaApptest.csproj" />
+        <entry key="AvaloniaApptest/Views/BlankView.axaml" value="AvaloniaApptest/AvaloniaApptest.csproj" />
+        <entry key="AvaloniaApptest/Views/ExamManageView.axaml" value="AvaloniaApptest/AvaloniaApptest.csproj" />
+        <entry key="AvaloniaApptest/Views/HomeView.axaml" value="AvaloniaApptest/AvaloniaApptest.csproj" />
+        <entry key="AvaloniaApptest/Views/LoginView.axaml" value="AvaloniaApptest/AvaloniaApptest.csproj" />
+        <entry key="AvaloniaApptest/Views/MainWindow.axaml" value="AvaloniaApptest/AvaloniaApptest.csproj" />
+        <entry key="AvaloniaApptest/Views/MapsuiView.axaml" value="AvaloniaApptest/AvaloniaApptest.csproj" />
+        <entry key="AvaloniaApptest/Views/NavigationView.axaml" value="AvaloniaApptest/AvaloniaApptest.csproj" />
+        <entry key="AvaloniaApptest/Views/RadorManageView.axaml" value="AvaloniaApptest/AvaloniaApptest.csproj" />
+        <entry key="AvaloniaApptest/Views/SystemManageView.axaml" value="AvaloniaApptest/AvaloniaApptest.csproj" />
+        <entry key="AvaloniaApptest/Views/UserManageView.axaml" value="AvaloniaApptest/AvaloniaApptest.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
