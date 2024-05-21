@@ -52,7 +52,7 @@ namespace WebApptest
             }
 
             app.UseHttpsRedirection();
-            
+            //用户认证
             app.UseAuthorization();
             app.MapControllers();
             
